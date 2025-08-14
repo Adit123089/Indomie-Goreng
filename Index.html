@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Item Rak A1C</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+    }
+    h1 {
+        color: #333;
+    }
+    .product-btn {
+        background-color: #007BFF;
+        border: none;
+        padding: 12px 20px;
+        font-size: 16px;
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    .product-btn:hover {
+        background-color: #0056b3;
+    }
+    .popup {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.5);
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+    .popup-content {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        width: 300px;
+    }
+    .popup-content img {
+        max-width: 100%;
+        border-radius: 5px;
+    }
+    .close-btn {
+        margin-top: 15px;
+        padding: 8px 15px;
+        border: none;
+        background-color: #dc3545;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .close-btn:hover {
+        background-color: #a71d2a;
+    }
+</style>
+</head>
+<body>
+
+<h1>Produk</h1>
+<button class="product-btn" onclick="showPopup()">Lihat Produk</button>
+
+<div class="popup" id="popup">
+    <div class="popup-content">
+        <img src="indomie.jpg" alt="Indomie Goreng">
+        <h2>Indomie Goreng</h2>
+        <p>Isi: 40 bks/pack</p>
+        <p>QTY: 11</p>
+        <p>Harga: Rp100.000</p>
+        <p>Kode Barang: 8889686010947</p>
+        <button class="close-btn" onclick="hidePopup()">Tutup</button>
+    </div>
+</div>
+
+<script>
+function showPopup() {
+    document.getElementById("popup").style.display = "flex";
+}
+function hidePopup() {
+    document.getElementById("popup").style.display = "none";
+}
+</script>
+
+</body>
+</html>
